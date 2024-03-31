@@ -54,7 +54,6 @@ jobs:
           sudo apt-get install g++-multilib lib32z1-dev 
           sudo apt-get install gcc-multilib maven tmux screen w3m ncftp
           sudo apt-get install libncurses5-dev 
-          sudo apt-get install libreadline-gplv2-dev
           sudo apt-get install openjdk-8-jdk
 
       - name: "⭐ config env and download repo"
