@@ -67,7 +67,9 @@ jobs:
       - name: "🎶 Build android"
         working-directory: ./${{ env.workerDir }}
         run: |
-          source build/envsetup.sh
+          echo "PATH Variable: $PATH"
+          echo "workerDir: $workerDir"
+          source ./build/envsetup.sh
           mmm LineageOS/android_art
 
       - name: "⭐ Install prerequisites"
