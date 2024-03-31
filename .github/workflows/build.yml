@@ -197,6 +197,7 @@ jobs:
       - name: "🎶 Build android"
         working-directory: ./${{ env.workerDir }}
         run: |
+          rm -rf ./art/test/
           source build/envsetup.sh
           lunch lineage_lavender-userdebug
           #breakfast lavender
