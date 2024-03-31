@@ -67,6 +67,7 @@ jobs:
           python sdat2img/sdat2img.py vendor.transfer.list vendor.new.dat vendor.img
           sudo mkdir system/
           sudo mount system.img system/
+          sudo rm system/vendor
           sudo mkdir system/vendor
           sudo mount vendor.img system/vendor/
           ./extract-files.sh ~/android/system_dump/
