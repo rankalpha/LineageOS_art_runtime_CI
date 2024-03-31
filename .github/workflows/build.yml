@@ -75,7 +75,7 @@ jobs:
       - name: "🎶 repo sync lavender module"
         working-directory: ./${{ env.workerDir }}
         run: |
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_device_xiaomi_lavender
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_device_xiaomi_sdm660-common
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_hardware_xiaomi
