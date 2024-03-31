@@ -154,7 +154,7 @@ jobs:
         working-directory: ./${{ env.workerDir }}
         run: |
           source build/envsetup.sh
-          lunch lavender-userdebug
+          lunch lineage_lavender-userdebug
           #breakfast lavender
           #mmm art
           
