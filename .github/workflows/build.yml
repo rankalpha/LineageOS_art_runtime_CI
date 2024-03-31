@@ -150,7 +150,7 @@ jobs:
           source build/envsetup.sh
           lunch lineage_lavender-userdebug
           #breakfast lavender
-          #mmm art
+          mmm art
           
       - name: "💛 Upload libart.so"
         uses: actions/upload-artifact@v3
