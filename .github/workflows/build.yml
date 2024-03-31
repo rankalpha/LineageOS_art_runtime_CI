@@ -66,6 +66,7 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_vendor_lineage
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_build_soong
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_build_blueprint
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/go/linux-x86
           
       - name: "🎶 Build android"
         working-directory: ./${{ env.workerDir }}
