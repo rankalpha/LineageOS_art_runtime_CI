@@ -54,13 +54,13 @@ jobs:
           curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
           chmod a+x ~/bin/repo
           
-      - name: "🌟 Clone android branch source"
+      - name: "🌟 init git android branch source"
         working-directory: ./${{ env.workerDir }}
         run: ~/bin/repo init -u https://github.com/LineageOS/android.git -b $branch --git-lfs --depth=1
 
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
-        run: repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/art
+        run: ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/art
         
       - name: "⭐ Install prerequisites"
         run: |
