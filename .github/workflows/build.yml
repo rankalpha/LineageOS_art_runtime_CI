@@ -195,6 +195,7 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_frameworks_av
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_sepolicy
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_timezone
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_icu
           
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
