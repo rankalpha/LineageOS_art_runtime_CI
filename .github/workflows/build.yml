@@ -198,6 +198,7 @@ jobs:
         working-directory: ./${{ env.workerDir }}
         run: |
           rm -rf ./art/test/
+          rm -rf ./art/tools/
           source build/envsetup.sh
           lunch lineage_lavender-userdebug
           #breakfast lavender
