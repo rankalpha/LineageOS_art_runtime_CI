@@ -141,46 +141,46 @@ jobs:
       - name: "🎶 repo sync prebuilts module"
         working-directory: ./${{ env.workerDir }}
         run: |          
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/abi-dumps/ndk
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/abi-dumps/platform
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/abi-dumps/vndk
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/android-emulator
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/abi-dumps/ndk
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/abi-dumps/platform
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/abi-dumps/vndk
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/android-emulator
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/asuite
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/bundletool
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/checkcolor
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/checkstyle
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/bundletool
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/checkcolor
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/checkstyle
           #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/clang-tools
           #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/clang/host/darwin-x86
           #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/clang/host/linux-x86
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/cmdline-tools
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/cmdline-tools
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/devtools
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/fuchsia_sdk
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/fuchsia_sdk
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/gas/linux-x86
           #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8
           #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/gdb/darwin-x86
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/gdb/linux-x86
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/gdb/linux-x86
           #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/go/darwin-x86
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/go/linux-x86
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/gradle-plugin
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/jdk/jdk11
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/jdk/jdk8
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/jdk/jdk9
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/ktlint
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/manifest-merger
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/maven_repo/android
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/maven_repo/bumptech
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/misc
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/gradle-plugin
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/jdk/jdk11
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/jdk/jdk8
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/jdk/jdk9
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/ktlint
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/manifest-merger
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/maven_repo/android
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/maven_repo/bumptech
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/misc
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/module_sdk/art
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/ndk
           #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/python/darwin-x86/2.7.5
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/python/linux-x86/2.7.5
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/qemu-kernel
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/r8
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/remoteexecution-client
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/qemu-kernel
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/r8
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/remoteexecution-client
           #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/runtime
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/rust
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/rust
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/sdk
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/tools
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/vndk/v27
