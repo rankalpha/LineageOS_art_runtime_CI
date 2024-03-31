@@ -57,6 +57,11 @@ jobs:
       - name: "🌟 init git android branch source"
         working-directory: ./${{ env.workerDir }}
         run: ~/bin/repo init -u https://github.com/LineageOS/android.git -b $branch --git-lfs --depth=1
+
+      - name: "🌟 create local manifest file"
+        working-directory: ./${{ env.workerDir }}
+        run: |
+          mkdir -p $workerDir/.repo/local_manifests
           echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" >> $workerDir/.repo/local_manifests/roomservice.xml
           echo "<manifest> >> $workerDir/.repo/local_manifests/roomservice.xml
           echo "  <project path=\"device/xiaomi/lavender\" remote=\"github\" name=\"LineageOS/android_device_xiaomi_lavender\" />" >> $workerDir/.repo/local_manifests/roomservice.xml
