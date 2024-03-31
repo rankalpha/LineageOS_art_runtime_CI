@@ -56,7 +56,10 @@ jobs:
           
       - name: "🌟 init git android branch source"
         working-directory: ./${{ env.workerDir }}
-        run: ~/bin/repo init -u https://github.com/LineageOS/android.git -b $branch --git-lfs --depth=1
+        run: |
+          ~/bin/repo init -u https://github.com/LineageOS/android.git -b $branch --git-lfs --depth=1
+          ls -A
+          echo "++++++++++++++++++++++++++"
 
       - name: "🌟 create local manifest file"
         working-directory: ./${{ env.workerDir }}
