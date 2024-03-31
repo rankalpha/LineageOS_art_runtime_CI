@@ -40,21 +40,10 @@ jobs:
       kernelRepo: ${{ matrix.repos.androidSource.repo }}
       branch: ${{ matrix.repos.androidSource.branch }}
       kernelDevice: ${{ matrix.repos.androidSource.device }}
+      
     steps:
       - name: "✨ Create working dir"
         run: mkdir -p $workerDir
-
-      - name: "⭐ Install prerequisites"
-        run: |
-          sudo apt-get update
-          sudo apt-get install gnupg flex bison gperf libsdl1.2-dev
-          sudo apt-get install squashfs-tools build-essential zip curl libncurses5-dev 
-          sudo apt-get install zlib1g-dev openjdk-8-jre openjdk-8-jdk pngcrush schedtool 
-          sudo apt-get install libxml2 libxml2-utils xsltproc lzop libc6-dev schedtool 
-          sudo apt-get install g++-multilib lib32z1-dev 
-          sudo apt-get install gcc-multilib maven tmux screen w3m ncftp
-          sudo apt-get install libncurses5-dev 
-          sudo apt-get install openjdk-8-jdk
 
       - name: "⭐ config env and download repo"
         run: |
@@ -70,12 +59,23 @@ jobs:
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
         run: repo init -u https://mirrors.tuna.tsinghua.edu.cn/git/LineageOS/LineageOS/android.git -b $branch --git-lfs --depth=1
-          git clone --recursive --branch $kernelBranch $kernelRepo $kernelName --depth=1
 
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
         run: repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/art
         
+      - name: "⭐ Install prerequisites"
+        run: |
+          sudo apt-get update
+          sudo apt-get install gnupg flex bison gperf libsdl1.2-dev
+          sudo apt-get install squashfs-tools build-essential zip curl libncurses5-dev 
+          sudo apt-get install zlib1g-dev openjdk-8-jre openjdk-8-jdk pngcrush schedtool 
+          sudo apt-get install libxml2 libxml2-utils xsltproc lzop libc6-dev schedtool 
+          sudo apt-get install g++-multilib lib32z1-dev 
+          sudo apt-get install gcc-multilib maven tmux screen w3m ncftp
+          sudo apt-get install libncurses5-dev 
+          sudo apt-get install openjdk-8-jdk
+
       - name: "🎶 Build android"
         working-directory: ./${{ env.kernelDir }}
         run: mm platform/art:runtime
