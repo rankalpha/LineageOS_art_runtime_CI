@@ -45,6 +45,35 @@ jobs:
       - name: "✨ Create working dir"
         run: mkdir -p $workerDir
 
+      - name: "✨ download zip"
+        run: |
+          mkdir ~/android
+          cd ~/android
+          sudo apt-get update
+          sudo apt-get install curl
+          curl https://b2.timschumi.net/file/lineage-archive/lineage-18.1-20220920-nightly-lavender-signed.zip -o lavender.zip
+
+      - name: "✨ unzip zipfile and mount image"
+        run: |
+          mkdir ~/android/system_dump/
+          cd ~/android/system_dump/
+          unzip ../lavender.zip system.transfer.list system.new.dat*
+          unzip ../lavender.zip vendor.transfer.list vendor.new.dat*
+          sudo apt-get install brotli
+          brotli --decompress --output=system.new.dat system.new.dat.br
+          brotli --decompress --output=vendor.new.dat vendor.new.dat.br
+          git clone https://github.com/xpirt/sdat2img
+          python sdat2img/sdat2img.py system.transfer.list system.new.dat system.img
+          python sdat2img/sdat2img.py vendor.transfer.list vendor.new.dat vendor.img
+          sudo mkdir system/
+          sudo mount system.img system/
+          sudo mkdir system/vendor
+          sudo mount vendor.img system/vendor/
+          ./extract-files.sh ~/android/system_dump/
+          sudo umount ~/android/system_dump/system/vendor
+          sudo umount ~/android/system_dump/system
+          rm -rf ~/android/system_dump/
+
       - name: "⭐ config env and download repo"
         run: |
           git config --global user.email "rankalpha@yandex.com"
