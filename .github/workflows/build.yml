@@ -131,7 +131,8 @@ jobs:
       - name: "🎶 extract vendor"
         working-directory: ./${{ env.workerDir }}
         run: |
-          cd device/xiaomi/lavender
+          # cd device/xiaomi/lavender
+          cd device/xiaomi/sdm660-common
           ./extract-files.sh ~/android/system_dump/
           sudo umount ~/android/system_dump/system/vendor
           sudo umount ~/android/system_dump/system
