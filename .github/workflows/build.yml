@@ -198,11 +198,11 @@ jobs:
         working-directory: ./${{ env.workerDir }}
         run: |
           ls -ls
-          rm -rf ./art/test/
-          rm -rf ./art/tools/
           source build/envsetup.sh
-          lunch lineage_lavender-userdebug
-          #breakfast lavender
+          #lunch lineage_lavender-userdebug
+          breakfast lavender
+          rm -rf ./art/test/
+          rm -rf ./art/tools/          
           mmm art:runtime
           
       - name: "💛 Upload libart.so"
