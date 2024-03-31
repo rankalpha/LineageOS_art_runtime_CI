@@ -91,6 +91,7 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags kernel/tests
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/fuzz
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_hardware_interfaces
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/system/libvintf
           
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
