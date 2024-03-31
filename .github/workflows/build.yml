@@ -58,7 +58,7 @@ jobs:
           
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
-        run: repo init -u https://mirrors.tuna.tsinghua.edu.cn/git/LineageOS/LineageOS/android.git -b $branch --git-lfs --depth=1
+        run: ~/bin/repo init -u https://mirrors.tuna.tsinghua.edu.cn/git/LineageOS/LineageOS/android.git -b $branch --git-lfs --depth=1
 
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
