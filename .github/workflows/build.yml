@@ -60,7 +60,7 @@ jobs:
 
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
-        run: ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/art
+        run: ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_art
         
       - name: "⭐ Install prerequisites"
         run: |
