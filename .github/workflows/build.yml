@@ -117,6 +117,7 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/performance
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/security
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/vndk
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/tools/asuite
 
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
