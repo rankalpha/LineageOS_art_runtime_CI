@@ -2,6 +2,7 @@
     {
     "androidSource": {
       "name": "Kernel",
+      "workerDir": "lineage",
       "repo": "https://github.com/rankalpha/LineageOS_android_kernel_xiaomi_sdm660",
       "branch": "lineage-18.1",
       "device": "lavender"
