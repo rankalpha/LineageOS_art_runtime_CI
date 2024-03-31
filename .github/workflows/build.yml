@@ -142,9 +142,9 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/bundletool
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/checkcolor
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/checkstyle
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/clang-tools
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/clang-tools
           #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/clang/host/darwin-x86
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/clang/host/linux-x86
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/clang/host/linux-x86
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/cmdline-tools
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/devtools
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/fuchsia_sdk
