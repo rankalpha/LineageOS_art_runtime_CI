@@ -142,13 +142,7 @@ jobs:
       - name: "⭐ Install prerequisites"
         run: |
           sudo apt-get update
-          sudo apt-get install gnupg flex bison gperf libsdl1.2-dev \
-                               squashfs-tools build-essential zip curl libncurses5-dev \ 
-                               zlib1g-dev openjdk-8-jre openjdk-8-jdk pngcrush schedtool \ 
-                               libxml2 libxml2-utils xsltproc lzop libc6-dev schedtool \
-                               g++-multilib lib32z1-dev \
-                               gcc-multilib maven tmux screen w3m ncftp \
-                               libncurses5-dev
+          sudo apt-get install gnupg flex bison gperf libsdl1.2-dev squashfs-tools build-essential zip curl libncurses5-dev zlib1g-dev openjdk-8-jre openjdk-8-jdk pngcrush schedtool libxml2 libxml2-utils xsltproc lzop libc6-dev schedtool g++-multilib lib32z1-dev gcc-multilib maven tmux screen w3m ncftp libncurses5-dev
                                
       - name: "🎶 Build android"
         working-directory: ./${{ env.workerDir }}
