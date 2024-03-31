@@ -1,0 +1,19 @@
+[  
+    {
+    "androidSource": {
+      "name": "Kernel",
+      "repo": "https://github.com/rankalpha/LineageOS_android_kernel_xiaomi_sdm660",
+      "branch": "lineage-18.1",
+      "device": "lavender"
+    }, 
+    "params": {
+      "ARCH": "arm64",
+      "CROSS_COMPILE": "aarch64-linux-gnu-",
+      "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
+      "CROSS_COMPILE_COMPAT": "arm-linux-gnueabi-",
+      "CLANG_TRIPLE": "aarch64-linux-gnu-",
+      "AR": "",
+      "CC": "clang"
+    }
+  }
+]
