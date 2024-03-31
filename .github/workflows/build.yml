@@ -88,6 +88,8 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_frameworks_native
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags kernel/configs
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/system/tools/xsdc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags kernel/tests
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/fuzz
           
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
