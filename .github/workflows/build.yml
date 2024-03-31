@@ -72,7 +72,7 @@ jobs:
           echo "</manifest>" >> .repo/local_manifests/roomservice.xml
           #cat .repo/local_manifests/roomservice.xml
 
-      - name: "🎶 repo sync lavender module"
+      - name: "🎶 repo sync lineage module"
         working-directory: ./${{ env.workerDir }}
         run: |
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_device_xiaomi_lavender
@@ -107,7 +107,10 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.9
-          
+
+      - name: "🎶 repo sync lavender module"
+        working-directory: ./${{ env.workerDir }}
+        run: |          
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags external/golang-protobuf
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags kernel/configs
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags kernel/tests
@@ -134,6 +137,10 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/skqp
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/yapf
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/platform_testing
+
+      - name: "🎶 repo sync prebuilts module"
+        working-directory: ./${{ env.workerDir }}
+        run: |          
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/abi-dumps/ndk
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/abi-dumps/platform
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/abi-dumps/vndk
@@ -172,13 +179,17 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/qemu-kernel
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/r8
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/remoteexecution-client
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/runtime
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/runtime
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/rust
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/sdk
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/tools
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/vndk/v27
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/vndk/v28
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/vndk/v29
+
+      - name: "🎶 repo sync other module"
+        working-directory: ./${{ env.workerDir }}
+        run: |          
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/system/apex
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/system/libvintf
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/system/tools/xsdc
@@ -258,6 +269,7 @@ jobs:
           sudo umount ~/android/system_dump/system/vendor
           sudo umount ~/android/system_dump/system
           rm -rf ~/android/system_dump/
+          rm ~/android/lavender.zip
           
       - name: "⭐ Install prerequisites"
         run: |
