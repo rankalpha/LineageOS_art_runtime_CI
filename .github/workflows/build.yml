@@ -83,6 +83,9 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_device_qcom_sepolicy
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_system_tools_hidl
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_system_tools_aidl
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_hardware_interfaces
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/hal
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_frameworks_native
           
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
