@@ -198,6 +198,7 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_icu
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_prebuilts_tools-lineage
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/module_sdk/art
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_libcore
           
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
