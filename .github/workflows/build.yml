@@ -94,7 +94,7 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_aac
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/adeb
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/adhd
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/adt-infra
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/adt-infra
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/android-clat
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/androidplot
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/angle
@@ -586,29 +586,29 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  toolchain/benchmark
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  toolchain/pgo-profiles
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/acloud
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/adt/idea
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/adt/idea
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/apifinder
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_tools_apksig
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/apkzlib
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/asuite
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/base
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/build
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/base
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/build
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/carrier_settings
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/currysrc
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/dexter
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/doc_generation
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/external_updater
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/external/fat32lib
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/idea
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/idea
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/loganalysis
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_tools_metalava
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/motodev
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/motodev
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/ndkports
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  tools/platform-compat
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/repohooks
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/security
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/studio/cloud
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/swt
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/swt
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/test/connectivity
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/test/graphicsbenchmark
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/tradefederation/contrib
