@@ -69,7 +69,10 @@ jobs:
           echo "  <project path=\"hardware/xiaomi\" remote=\"github\" name=\"LineageOS/android_hardware_xiaomi\" />" >> $workerDir/.repo/local_manifests/roomservice.xml
           echo "  <project path=\"kernel/xiaomi/sdm660\" remote=\"github\" name=\"LineageOS/android_kernel_xiaomi_sdm660\" />" >> $workerDir/.repo/local_manifests/roomservice.xml
           echo "</manifest>" >> $workerDir/.repo/local_manifests/roomservice.xml
-          cat $workerDir/.repo/local_manifests/roomservice.xml
+          #cat $workerDir/.repo/local_manifests/roomservice.xml
+          ls -A
+          echo "------------"
+          ls .repo -l
 
       - name: "🎶 repo sync lavender module"
         working-directory: ./${{ env.workerDir }}
