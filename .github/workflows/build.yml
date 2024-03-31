@@ -187,6 +187,12 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/skqp
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/platform_testing
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/apex
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/skia
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_webp
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/harfbuzz_ng
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/sfntly
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/giflib
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_frameworks_av
           
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
