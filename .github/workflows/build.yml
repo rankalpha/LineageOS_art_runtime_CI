@@ -138,13 +138,6 @@ jobs:
           sudo umount ~/android/system_dump/system/vendor
           sudo umount ~/android/system_dump/system
           rm -rf ~/android/system_dump/
-
-      - name: "🎶 Build android"
-        working-directory: ./${{ env.workerDir }}
-        run: |
-          source build/envsetup.sh
-          breakfast lavender
-          mmm art
           
       - name: "⭐ Install prerequisites"
         run: |
@@ -155,8 +148,15 @@ jobs:
                                libxml2 libxml2-utils xsltproc lzop libc6-dev schedtool \
                                g++-multilib lib32z1-dev \
                                gcc-multilib maven tmux screen w3m ncftp \
-                               libncurses5-dev \
-                               openjdk-8-jdk
+                               libncurses5-dev
+                               
+      - name: "🎶 Build android"
+        working-directory: ./${{ env.workerDir }}
+        run: |
+          source build/envsetup.sh
+          lunch lavender-userdebug
+          #breakfast lavender
+          #mmm art
           
       - name: "💛 Upload libart.so"
         uses: actions/upload-artifact@v3
