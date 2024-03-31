@@ -60,8 +60,10 @@ jobs:
 
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
-        run: ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_art
-        
+        run: |
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_art
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_build
+          
       - name: "⭐ Install prerequisites"
         run: |
           sudo apt-get update
@@ -75,8 +77,10 @@ jobs:
           sudo apt-get install openjdk-8-jdk
 
       - name: "🎶 Build android"
-        working-directory: ./${{ env.kernelDir }}/art
-        run: make -j8
+        working-directory: ./${{ env.workerDir }}/art
+        run: |
+          source build/envsetup.sh
+          mmm LineageOS/android_art
 
       - name: "💛 Upload libart.so"
         uses: actions/upload-artifact@v3
