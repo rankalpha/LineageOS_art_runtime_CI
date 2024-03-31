@@ -75,64 +75,494 @@ jobs:
       - name: "🎶 repo sync lavender module"
         working-directory: ./${{ env.workerDir }}
         run: |
-          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_device_xiaomi_lavender
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_device_xiaomi_sdm660-common
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_hardware_xiaomi
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_kernel_xiaomi_sdm660        
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_tools_extract-utils
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_device_qcom_sepolicy
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_system_tools_hidl
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_system_tools_aidl
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_hardware_interfaces
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/hal
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_frameworks_native
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags kernel/configs
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/system/tools/xsdc
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags kernel/tests
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/fuzz
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_hardware_interfaces
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/system/libvintf
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/enum34
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/futures
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/httplib2
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/oauth2client
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/parse_type
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/pyasn1
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/pyasn1-modules
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/rsa
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/setuptools
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/six
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/uritemplates
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/yapf
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/framework
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vti/dashboard
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vti/fuzz_test_serving
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vti/test_serving
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/fuzz
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/hal
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/hal-trace
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/kernel
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/nbu
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/performance
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/security
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/vndk
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/tools/asuite
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_kernel_xiaomi_sdm660    
+
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_build
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_build_blueprint
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_build_soong
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_art
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_bionic
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_bootable_recovery
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/compatibility/cdd
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_cts
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/dalvik
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/developers/build
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_development
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_aac
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/adeb
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/adhd
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/android-clat
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/androidplot
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/angle
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/ant-glob
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/antlr
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/apache-commons-bcel
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/apache-commons-compress
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/apache-commons-math
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/apache-harmony
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/apache-http
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/apache-xml
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/arm-neon-tests
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/arm-optimized-routines
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/arm-trusted-firmware
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/autotest
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/avb
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/bc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/bcc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/blktrace
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_boringssl
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/bouncycastle
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/brotli
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/bsdiff
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/bzip2
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/caliper
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/capstone
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/catch2
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/cblas
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/cbor-java
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/chromium-libpac
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/chromium-trace
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/clang
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_cldr
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/cn-cbor
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/compiler-rt
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/conscrypt
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/cpu_features
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/cpuinfo
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/crcalc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/cros/system_api
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/crosvm
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/curl
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/dagger2
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/deqp
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/deqp-deps/SPIRV-Headers
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/deqp-deps/SPIRV-Tools
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/deqp-deps/amber
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/deqp-deps/glslang
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/desugar
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/dexmaker
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/dlmalloc
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/dng_sdk
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/dnsmasq
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/doclava
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/dokka
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/drm_hwcomposer
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/drrickorang
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_dtc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/dynamic_depth
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_e2fsprogs
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/easymock
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/eigen
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/elfutils
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/emma
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/error_prone
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/ethtool
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/exoplayer
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_expat
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/f2fs-tools
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/fastrpc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/fdlibm
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/fec
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/flac
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/flatbuffers
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/fmtlib
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/fonttools
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/FP16
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_freetype
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/fsck_msdos
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/fsverity-utils
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/FXdiv
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/gemmlowp
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/gflags
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/giflib
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/glide
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/golang-protobuf
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-benchmark
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-breakpad
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-fonts/arbutus-slab
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-fonts/arvo
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-fonts/barlow
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-fonts/big-shoulders-text
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-fonts/carrois-gothic-sc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-fonts/coming-soon
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-fonts/cutive-mono
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-fonts/dancing-script
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-fonts/fraunces
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-fonts/karla
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-fonts/lato
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-fonts/lustria
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-fonts/rubik
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-fonts/source-sans-pro
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-fonts/zilla-slab
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-fruit
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/google-styleguide
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/googletest
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_gptfdisk
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/grpc-grpc
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/grpc-grpc-java
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/guava
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_guice
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/gwp_asan
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/hamcrest
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/harfbuzz_ng
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/honggfuzz
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/hyphenation-patterns
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_icu
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/igt-gpu-tools
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/ImageMagick
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/image_io
+          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/ims
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/iperf3
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/iproute2
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/ipsec-tools
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/iptables
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/iputils
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/iw
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/jacoco
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/jarjar
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/javaparser
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/javapoet
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/javasqlite
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/jcommander
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/jdiff
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/jemalloc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/jemalloc_new
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/jline
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/jsilver
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/jsmn
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/jsoncpp
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/jsr305
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/jsr330
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/junit
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/junit-params
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/kernel-headers
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/kmod
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/kotlinc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/kotlinx.coroutines
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/ksoap2
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libaom
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_libavc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libbackup
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libbrillo
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libcap
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libcap-ng
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libchrome
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_libcups
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_libcxx
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libcxxabi
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libdaemon
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libdivsufsort
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libdrm
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libepoxy
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libese
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libevent
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_libexif
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libffi
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libfuse
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libgav1
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libgsm
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libhevc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libiio
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libjpeg-turbo
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libkmsxx
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libldac
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libmpeg2
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libnetfilter_conntrack
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libnfnetlink
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libnl
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libogg
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libopus
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libpcap
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libphonenumber
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libpng
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libprotobuf-mutator
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libsrtp2
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libtextclassifier
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libunwind
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libunwind_llvm
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libusb
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libutf
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_libvpx
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libxaac
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libxkbcommon
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_libxml2
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/libyuv
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/linux-kselftest
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/llvm
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/lmfit
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/ltp
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/lua
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/lz4
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/lzma
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/markdown
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/mdnsresponder
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/mesa3d
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/mime-support
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/minigbm
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/minijail
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_mksh
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/mockftpserver
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/mockito
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/mockwebserver
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/modp_b64
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/mp4parser
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/mtpd
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/nanohttpd
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/nanopb-c
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/naver-fonts
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/neon_2_sse
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/neven
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/newfs_msdos
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/nfacct
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/nist-pkits
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/nist-sip
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/nos/host/generic
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/noto-fonts
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/oauth
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/objenesis
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/oj-libjdwp
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/okhttp
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/one-true-awk
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/opencensus-java
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/OpenCL-CTS
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/OpenCSD
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_openssh
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/oss-fuzz
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/owasp/sanitizer
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/parameter-framework
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/pcre
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_pdfium
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_perfetto
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/piex
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/ply
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/ppp
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/proguard
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/protobuf
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/psimd
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/pthreadpool
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/puffin
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/apitools
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/asn1crypto
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/cffi
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/cpython2
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/cpython3
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/cryptography
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/dateutil
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/enum34
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/funcsigs
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/futures
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/google-api-python-client
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/httplib2
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/ipaddress
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/mock
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/oauth2client
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/parse_type
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/pyasn1
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/pyasn1-modules
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/pybind11
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/pycparser
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/pyopenssl
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/rsa
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/setuptools
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/six
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/python/uritemplates
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/rappor
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/replicaisland
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/rmi4utils
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_robolectric-shadows
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/roboto-fonts
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/rootdev
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/Reactive-Extensions/RxCpp
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/rust/crates/byteorder
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/rust/crates/libc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/rust/crates/proc-macro2
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/rust/crates/quote
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/rust/crates/remain
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/rust/crates/syn
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/rust/crates/unicode-xid
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/scapy
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/scrypt
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/scudo
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/seccomp-tests
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/selinux
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/setupcompat
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/setupdesign
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/sfntly
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/shaderc/spirv-headers
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/shflags
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/skia
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/skqp
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/sl4a
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/slf4j
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/smali
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/snakeyaml
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/sonic
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/sonivox
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/speex
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/sqlite
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/squashfs-tools
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/strace
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/stressapptest
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/subsampling-scale-image-view
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/swiftshader
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/tagsoup
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/tcpdump
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/tensorflow
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/testng
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_tinyalsa
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_tinycompress
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/tinyxml
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/tinyxml2
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/toolchain-utils
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_toybox
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_tremolo
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/turbine
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/u-boot
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/unicode
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/universal-tween-engine
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/ukey2
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/v4l2_codec2
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/v8
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/vboot_reference
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/virglrenderer
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/vixl
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/vogar
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/volley
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/vulkan-headers
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/vulkan-validation-layers
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/walt
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/wayland
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/wayland-protocols
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_webp
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/webrtc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_wpa_supplicant_8
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/wycheproof
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/xmp_toolkit
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/XNNPACK
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/xz-embedded
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/xz-java
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/yapf
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_zlib
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/zopfli
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/zxing
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_frameworks_av
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/frameworks/libs/modules-utils
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_hardware_interfaces
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_hardware_libhardware
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/hardware/libhardware_legacy
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_hardware_ril
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/hardware/st/nfc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/hardware/st/secure_element
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/hardware/ti/am57x
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  kernel/configs
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  kernel/prebuilts/4.19/arm64
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  kernel/tests
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_libcore
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/libnativehelper
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/pdk
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/platform_testing
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/abi-dumps/ndk
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/abi-dumps/platform
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/abi-dumps/vndk
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/android-emulator
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/asuite
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_prebuilts_build-tools
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/bundletool
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/checkcolor
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/checkstyle
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/clang-tools
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/clang/host/linux-x86
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/cmdline-tools
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/devtools
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/fuchsia_sdk
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/gas/linux-x86
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_prebuilts_gcc_darwin-x86_aarch64_aarch64-linux-android-4.9
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_prebuilts_gcc_darwin-x86_arm_arm-linux-androideabi-4.9
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_prebuilts_gcc_darwin-x86_x86_x86_64-linux-android-4.9
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.9
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/gdb/darwin-x86
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/gdb/linux-x86
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/go/darwin-x86
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/go/linux-x86
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/acloud
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_tools_apksig
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/apkzlib
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/loganalysis
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/repohooks
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/tradefederation/contrib
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/tradefederation
-          
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/gradle-plugin
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/jdk/jdk11
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/jdk/jdk8
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/jdk/jdk9
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/manifest-merger
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/maven_repo/android
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/maven_repo/bumptech
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/misc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/module_sdk/art
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/ndk
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/ktlint
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/python/darwin-x86/2.7.5
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/python/linux-x86/2.7.5
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/qemu-kernel
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/remoteexecution-client
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/runtime
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/rust
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/r8
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/sdk
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/tools
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/vndk/v27
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/vndk/v28
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/vndk/v29
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/sdk
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/apex
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_bt
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/bpf
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/bpfprogs
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_ca-certificates
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/chre
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/connectivity/wificond
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/connectivity/wifilogd
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_core
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_extras
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/gatekeeper
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/gsid
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/hardware/interfaces
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/hwservicemanager
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_incremental_delivery
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/iorap
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/keymaster
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/libartpalette
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/libfmq
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_libhidl
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/libhwbinder
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/libsysprop
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_libufdt
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/libvintf
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/linkerconfig
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_media
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/memory/libion
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/memory/libmeminfo
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/memory/libmemtrack
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/memory/libmemunreachable
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/memory/lmkd
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_netd
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_nfc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/nvram
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/security
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_sepolicy
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/server_configurable_flags
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/teeui
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/testing/gtest_extras
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_timezone
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_tools_aidl
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_tools_hidl
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_tools_mkbootimg
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/tools/sysprop
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/tools/xsdc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_update_engine
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_vold
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/test/app_compat/csuite
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/test/framework
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/test/mlts/benchmark
@@ -154,74 +584,34 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  toolchain/benchmark
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  toolchain/pgo-profiles
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/acloud
-          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/adt/idea
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/apifinder
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_tools_apksig
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/apkzlib
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/asuite
-          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/base
-          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/build
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/carrier_settings
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/currysrc
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/dexter
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/doc_generation
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/external_updater
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/external/fat32lib
-          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/idea
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/loganalysis
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_tools_metalava
-          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/motodev
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/ndkports
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  tools/platform-compat
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/repohooks
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/security
-          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/studio/cloud
-          #~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/swt
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/studio/cloud
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/test/connectivity
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/test/graphicsbenchmark
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/tradefederation/contrib
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/tradefederation
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/treble
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/trebuchet
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_cts
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/skqp
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/platform_testing
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/system/apex
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/skia
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_webp
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/harfbuzz_ng
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/sfntly
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/giflib
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_frameworks_av
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_sepolicy
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_system_timezone
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_external_icu
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_prebuilts_extract-tools
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_prebuilts_tools-lineage
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/module_sdk/art
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_libcore
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
-          
-      - name: "🌟 Clone android branch source"
-        working-directory: ./${{ env.workerDir }}
-        run: |
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_art
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_build
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_vendor_lineage
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_build_soong
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_build_blueprint
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/go/linux-x86
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags external/golang-protobuf
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_prebuilts_build-tools
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_vendor_lineage
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/vndk/v27
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/vndk/v28
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/vndk/v29
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/okhttp
-
-      - name: "🎶 setup android environment"
-        working-directory: ./${{ env.workerDir }}
-        run: |
-          source ./build/envsetup.sh
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_tools_extract-utils
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_vendor_crowdin
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_vendor_lineage          
 
       - name: "✨ download zip"
         run: |
@@ -279,3 +669,4 @@ jobs:
           path: ./${{ env.kernelDir }}/${{ env.OUT_DIR }}/arch/${{ env.ARCH }}/boot
           if-no-files-found: ignore
           retention-days: 7
+
