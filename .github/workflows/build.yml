@@ -75,7 +75,7 @@ jobs:
           echo "PATH Variable: $PATH"
           echo "workerDir: $workerDir"
           source ./build/envsetup.sh
-          mmm LineageOS/android_art
+          mmm art:runtime
 
       - name: "⭐ Install prerequisites"
         run: |
