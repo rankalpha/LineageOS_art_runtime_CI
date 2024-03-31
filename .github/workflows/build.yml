@@ -68,12 +68,11 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_build_blueprint
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/go/linux-x86
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags external/golang-protobuf
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_prebuilts_build-tools
           
       - name: "🎶 Build android"
         working-directory: ./${{ env.workerDir }}
         run: |
-          echo "PATH Variable: $PATH"
-          echo "workerDir: $workerDir"
           source ./build/envsetup.sh
           mmm art:runtime
 
