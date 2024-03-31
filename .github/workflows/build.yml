@@ -141,6 +141,7 @@ jobs:
       - name: "🎶 Build android"
         working-directory: ./${{ env.workerDir }}
         run: |
+          source build/envsetup.sh
           breakfast lavender
           mmm art
           
