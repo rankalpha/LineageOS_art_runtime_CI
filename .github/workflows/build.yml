@@ -136,7 +136,7 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/system/apex
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/system/libvintf
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/system/tools/xsdc
-	        ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/app_compat/csuite
+	  ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/app_compat/csuite
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/framework
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/mlts/benchmark
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/mlts/models
