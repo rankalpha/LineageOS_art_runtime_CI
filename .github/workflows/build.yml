@@ -92,7 +92,32 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/fuzz
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_hardware_interfaces
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/system/libvintf
-          
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/enum34
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/futures
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/httplib2
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/oauth2client
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/parse_type
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/pyasn1
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/pyasn1-modules
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/rsa
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/setuptools
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/six
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/python/uritemplates
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/yapf
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/framework
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vti/dashboard
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vti/fuzz_test_serving
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vti/test_serving
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/fuzz
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/hal
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/hal-trace
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/kernel
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/nbu
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/performance
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/security
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/vndk
+
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
         run: |
