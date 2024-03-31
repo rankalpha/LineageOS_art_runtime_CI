@@ -183,6 +183,9 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/tradefederation
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/treble
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/trebuchet
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_cts
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/skqp
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/platform_testing
 
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
