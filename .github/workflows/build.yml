@@ -45,6 +45,62 @@ jobs:
       - name: "✨ Create working dir"
         run: mkdir -p $workerDir
 
+      - name: "⭐ config env and download repo"
+        run: |
+          git config --global user.email "rankalpha@yandex.com"
+          git config --global user.name "rankalpha"
+          mkdir ~/bin
+          PATH=~/bin:$PATH
+          curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+          chmod a+x ~/bin/repo
+          
+      - name: "🌟 init git android branch source"
+        working-directory: ./${{ env.workerDir }}
+        run: ~/bin/repo init -u https://github.com/LineageOS/android.git -b $branch --git-lfs --depth=1
+
+      - name: "🌟 create local manifest file"
+        working-directory: ./${{ env.workerDir }}
+        run: |
+          mkdir -p $workerDir/.repo/local_manifests
+          echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" >> $workerDir/.repo/local_manifests/roomservice.xml
+          echo "<manifest>" >> $workerDir/.repo/local_manifests/roomservice.xml
+          echo "  <project path=\"device/xiaomi/lavender\" remote=\"github\" name=\"LineageOS/android_device_xiaomi_lavender\" />" >> $workerDir/.repo/local_manifests/roomservice.xml
+          echo "  <project path=\"device/xiaomi/sdm660-common\" remote=\"github\" name=\"LineageOS/android_device_xiaomi_sdm660-common\" />" >> $workerDir/.repo/local_manifests/roomservice.xml
+          echo "  <project path=\"hardware/xiaomi\" remote=\"github\" name=\"LineageOS/android_hardware_xiaomi\" />" >> $workerDir/.repo/local_manifests/roomservice.xml
+          echo "  <project path=\"kernel/xiaomi/sdm660\" remote=\"github\" name=\"LineageOS/android_kernel_xiaomi_sdm660\" />" >> $workerDir/.repo/local_manifests/roomservice.xml
+          echo "</manifest>" >> $workerDir/.repo/local_manifests/roomservice.xml
+          cat $workerDir/.repo/local_manifests/roomservice.xml
+
+      - name: "🎶 repo sync lavender module"
+        working-directory: ./${{ env.workerDir }}
+        run: |
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_device_xiaomi_lavender
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_device_xiaomi_sdm660-common
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_hardware_xiaomi
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_kernel_xiaomi_sdm660        
+            
+      - name: "🌟 Clone android branch source"
+        working-directory: ./${{ env.workerDir }}
+        run: |
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_art
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_build
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_vendor_lineage
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_build_soong
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_build_blueprint
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/go/linux-x86
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags external/golang-protobuf
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_prebuilts_build-tools
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_vendor_lineage
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/vndk/v27
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/vndk/v28
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/vndk/v29
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/okhttp
+
+      - name: "🎶 setup android environment"
+        working-directory: ./${{ env.workerDir }}
+        run: |
+          source ./build/envsetup.sh
+
       - name: "✨ download zip"
         run: |
           mkdir ~/android
@@ -71,56 +127,6 @@ jobs:
           sudo mkdir system/vendor
           sudo mount vendor.img system/vendor/
 
-      - name: "⭐ config env and download repo"
-        run: |
-          git config --global user.email "rankalpha@yandex.com"
-          git config --global user.name "rankalpha"
-          mkdir ~/bin
-          PATH=~/bin:$PATH
-          curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-          chmod a+x ~/bin/repo
-          
-      - name: "🌟 init git android branch source"
-        working-directory: ./${{ env.workerDir }}
-        run: ~/bin/repo init -u https://github.com/LineageOS/android.git -b $branch --git-lfs --depth=1
-
-      - name: "🌟 create local manifest file"
-        working-directory: ./${{ env.workerDir }}
-        run: |
-          mkdir -p $workerDir/.repo/local_manifests
-          echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" >> $workerDir/.repo/local_manifests/roomservice.xml
-          echo "<manifest>" >> $workerDir/.repo/local_manifests/roomservice.xml
-          echo "  <project path=\"device/xiaomi/lavender\" remote=\"github\" name=\"LineageOS/android_device_xiaomi_lavender\" />" >> $workerDir/.repo/local_manifests/roomservice.xml
-          echo "  <project path=\"device/xiaomi/sdm660-common\" remote=\"github\" name=\"LineageOS/android_device_xiaomi_sdm660-common\" />" >> $workerDir/.repo/local_manifests/roomservice.xml
-          echo "  <project path=\"hardware/xiaomi\" remote=\"github\" name=\"LineageOS/android_hardware_xiaomi\" />" >> $workerDir/.repo/local_manifests/roomservice.xml
-          echo "  <project path=\"kernel/xiaomi/sdm660\" remote=\"github\" name=\"LineageOS/android_kernel_xiaomi_sdm660\" />" >> $workerDir/.repo/local_manifests/roomservice.xml
-          echo "</manifest>" >> $workerDir/.repo/local_manifests/roomservice.xml
-          cat $workerDir/.repo/local_manifests/roomservice.xml
-            
-      - name: "🌟 Clone android branch source"
-        working-directory: ./${{ env.workerDir }}
-        run: |
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_art
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_build
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_vendor_lineage
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_build_soong
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_build_blueprint
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/go/linux-x86
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags external/golang-protobuf
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_prebuilts_build-tools
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_vendor_lineage
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/vndk/v27
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/vndk/v28
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/prebuilts/vndk/v29
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/external/okhttp
-
-          
-      - name: "🎶 setup android environment"
-        working-directory: ./${{ env.workerDir }}
-        run: |
-          source ./build/envsetup.sh
-          breakfast lavender
-
       - name: "🎶 extract vendor"
         working-directory: ./${{ env.workerDir }}
         run: |
@@ -133,10 +139,6 @@ jobs:
       - name: "🎶 Build android"
         working-directory: ./${{ env.workerDir }}
         run: |
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_device_xiaomi_lavender
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_device_xiaomi_sdm660-common
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_hardware_xiaomi
-          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_kernel_xiaomi_sdm660        
           breakfast lavender
           mmm art
           
