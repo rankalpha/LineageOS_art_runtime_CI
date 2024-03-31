@@ -81,6 +81,7 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_kernel_xiaomi_sdm660        
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_tools_extract-utils
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_device_qcom_sepolicy
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_system_tools_hidl
           
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
