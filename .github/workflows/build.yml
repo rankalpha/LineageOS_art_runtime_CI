@@ -197,6 +197,7 @@ jobs:
       - name: "🎶 Build android"
         working-directory: ./${{ env.workerDir }}
         run: |
+          ls -ls
           rm -rf ./art/test/
           rm -rf ./art/tools/
           source build/envsetup.sh
