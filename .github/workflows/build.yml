@@ -76,7 +76,7 @@ jobs:
 
       - name: "🎶 Build android"
         working-directory: ./${{ env.kernelDir }}
-        run: mm platform/art:runtime
+        run: mm LineageOS/android_art
 
       - name: "💛 Upload libart.so"
         uses: actions/upload-artifact@v3
