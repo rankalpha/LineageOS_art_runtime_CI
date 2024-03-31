@@ -88,7 +88,6 @@ jobs:
         working-directory: ./${{ env.workerDir }}
         run: |
           source ./build/envsetup.sh
-          breakfast lavender
           mmm art:runtime
 
       - name: "⭐ Install prerequisites"
