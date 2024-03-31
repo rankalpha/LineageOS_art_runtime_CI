@@ -63,7 +63,9 @@ jobs:
         run: |
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_art
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_build
-
+          echo "workerDir: ${{ env.workerDir }}"
+          source build/envsetup.sh
+          
       - name: "🎶 Build android"
         working-directory: ./${{ env.workerDir }}
         run: |
