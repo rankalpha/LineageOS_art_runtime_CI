@@ -118,6 +118,19 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/security
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/test/vts-testcase/vndk
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags platform/tools/asuite
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/grpc-grpc
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/grpc-grpc-java
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/jline
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/external/opencensus-java
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/go/darwin-x86
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/prebuilts/go/linux-x86
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/acloud
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  LineageOS/android_tools_apksig
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/apkzlib
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/loganalysis
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/repohooks
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/tradefederation/contrib
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags  platform/tools/tradefederation
 
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
