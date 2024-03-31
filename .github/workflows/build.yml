@@ -79,7 +79,8 @@ jobs:
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_device_xiaomi_sdm660-common
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_hardware_xiaomi
           ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_kernel_xiaomi_sdm660        
-            
+          ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags LineageOS/android_tools_extract-utils
+          
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
         run: |
@@ -131,8 +132,7 @@ jobs:
       - name: "🎶 extract vendor"
         working-directory: ./${{ env.workerDir }}
         run: |
-          # cd device/xiaomi/lavender
-          cd device/xiaomi/sdm660-common
+          cd device/xiaomi/lavender
           ./extract-files.sh ~/android/system_dump/
           sudo umount ~/android/system_dump/system/vendor
           sudo umount ~/android/system_dump/system
