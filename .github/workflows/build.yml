@@ -63,7 +63,7 @@ jobs:
         run: |
           mkdir -p $workerDir/.repo/local_manifests
           echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" >> $workerDir/.repo/local_manifests/roomservice.xml
-          echo "<manifest> >> $workerDir/.repo/local_manifests/roomservice.xml
+          echo "<manifest>" >> $workerDir/.repo/local_manifests/roomservice.xml
           echo "  <project path=\"device/xiaomi/lavender\" remote=\"github\" name=\"LineageOS/android_device_xiaomi_lavender\" />" >> $workerDir/.repo/local_manifests/roomservice.xml
           echo "  <project path=\"device/xiaomi/sdm660-common\" remote=\"github\" name=\"LineageOS/android_device_xiaomi_sdm660-common\" />" >> $workerDir/.repo/local_manifests/roomservice.xml
           echo "  <project path=\"hardware/xiaomi\" remote=\"github\" name=\"LineageOS/android_hardware_xiaomi\" />" >> $workerDir/.repo/local_manifests/roomservice.xml
