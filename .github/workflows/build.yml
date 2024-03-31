@@ -49,8 +49,6 @@ jobs:
         run: |
           git config --global user.email "rankalpha@yandex.com"
           git config --global user.name "rankalpha"
-          export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'
-          source ~/.bashrc
           mkdir ~/bin
           PATH=~/bin:$PATH
           curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
@@ -58,7 +56,7 @@ jobs:
           
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
-        run: ~/bin/repo init -u https://mirrors.tuna.tsinghua.edu.cn/git/LineageOS/LineageOS/android.git -b $branch --git-lfs --depth=1
+        run: ~/bin/repo init -u https://github.com/LineageOS/android.git -b $branch --git-lfs --depth=1
 
       - name: "🌟 Clone android branch source"
         working-directory: ./${{ env.workerDir }}
